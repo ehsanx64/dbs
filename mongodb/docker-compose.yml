@@ -1,0 +1,25 @@
+version: '2'
+services:
+  main:
+    container_name: mongodb
+    image: mongo
+    restart: always
+    #environment:
+    #    MONGO_INITDB_DATABASE: mydb
+    #    MONGO_INITDB_ROOT_USERNAME: root
+    #    MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - ./dbs:/data/db
+      - ./mydb:/mnt/mydb
+    ports:
+      - 27017:27017
+    command: mongod 
+    networks:
+      static-network:
+        ipv4_address: 172.22.0.2
+networks: 
+  static-network:
+    ipam: 
+      config: 
+        - subnet: 172.22.0.0/16
+

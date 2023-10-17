@@ -5,9 +5,15 @@ SQL sample/library sources for various database systems.
 
 ## Overview of Folders
 
+The SQL databases:
+
 ### **mysql**: MySQL and/or MariaDB
 ### **pgsql**: PostgreSQL
 ### **tsql**: Microsoft SQL Server and T-SQL
+
+The NoSQL databases:
+
+### **mongodb**: MongoDB
 
 ## MySQL
 
