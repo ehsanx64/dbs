@@ -8,12 +8,3 @@ BEGIN
 	-- Just return Hello world for now
 	SELECT 'Hello world';
 END$$
-
----- Related Operations (in mysql shell)
--- List stored procedures
--- SHOW PROCEDURE STATUS;
--- Filter based on database name
--- SHOW PROCEDURE STATUS WHERE db = 'db_name';
--- Call the procedure
--- CALL HelloWorld();
-
