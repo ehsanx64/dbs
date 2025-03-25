@@ -2,15 +2,15 @@ version: '2'
 services:
   main:
     container_name: mongodb
-    image: mongo
+    image: mongo:4.4-focal
     restart: always
     #environment:
     #    MONGO_INITDB_DATABASE: mydb
     #    MONGO_INITDB_ROOT_USERNAME: root
     #    MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
-      - ./dbs:/data/db
-      - ./mydb:/mnt/mydb
+      - ./data:/data/db
+      - ./scripts:/mnt/scripts
     ports:
       - 27017:27017
     command: mongod 
