@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  cassandra:
+    image: cassandra:5
+    container_name: cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=TestCluster
+      - CASSANDRA_NUM_TOKENS=16
+      - CASSANDRA_DC=dc1
+      - CASSANDRA_RACK=rack1
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+    ports:
+      - "9042:9042"   # CQL
+    volumes:
+      - volume:/var/lib/cassandra
+
+volumes:
+  volume:
+
